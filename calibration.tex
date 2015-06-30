@@ -1,1 +1,59 @@
-\section{Calibration}
+\section{Energy calibration}
+%disable \color
+\def\color#1{\relax}
+
+The calorimeter requirements relevant to energy calibration are:
+
+\begin{itemize}
+\item Provide online calibration sufficient for calorimeter trigger.
+\item Precision commensurate with calorimeter resolution requirement of $\sigma_E\equiv \hbox{FWHM}/2.35 \sim 5$\% at 100 MeV. %(864 says rms)
+\item Absolute precision and stability better than 1\%.
+\begin{itemize}
+\item Absolute scale independent of tracker.
+\end{itemize}
+\item Because the crystals are different, an independent calibration is required for each crystal. 
+\item Light output is time-dependent, hence the time-dependence must be tracked (over a scale of weeks).
+\item Perform a (source) calibration of entire calorimeter in $\sim10$ minutes.
+\end{itemize}
+
+The calibration tools that we have available include:
+
+\begin{enumerate}
+\item Electronics pulser (FEE)
+\item Temperature monitoring
+ \item Light flasher system %docdb-2624 (LYSO), TDR
+ \item  {\color{red} Source calibration system, 6.13 MeV} %docdb-2904
+ \item {\color{magenta} Decays in orbit} %docdb-4618, docdb-4614(tracker)
+\begin{itemize}
+\item Compare with tracker 
+\item Different $B$ fields for different momentum ranges 
+\item Absolute spectrum well known at mid-energies 
+\end{itemize}
+ \item {\color{blue} Cosmic rays} %docdb-2991, docdb-3052
+ \item {\color{brown} 70 MeV $e^+$ from $\pi^+\to e^+\nu_e$} 
+\end{enumerate}
+
+The basic strategy is
+
+
+ The initial crystal-by-crystal calibration is performed using the 6 MeV source. We plan to do this
+pre-installation, and then of order once every week during operation of the experiment. This
+calibration will serve as the online calibration, in the calorimeter trigger.
+
+Higher energy with electrons from muons decaying in orbit (DIOs)
+ Interpolation and extrapolation with source
+ [Tracker could be used] 
+ 
+Absolute spectrum (at lower fields)
+ Check of MC extrapolation
+
+Monitor electronic gains with pulser
+ Monitor APD temperature
+ Monitor crystal transmission with light pulser
+
+ Investigate maintaining detailed crystal-by-crystal time-dependent model in MC
+using calibration and monitoring data
+
+Cosmic rays as independent check
+
+$\pi^+\to e^+\nu_e$ as independent check
