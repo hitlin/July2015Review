@@ -39,10 +39,10 @@ QE at the level of 40\% at 310 nm~\cite{docdb5166}. The electronic noise has bee
 extrapolated on measurements from LYSO, and 100 keV/MPPC for CsI crystals~\cite{docdb5405}.  
 
 The number of photo-electrons per MeV ($N_{p.e./ MeV}$) for $\rm BaF_2$ is derived following a measurement of 160 p.e./MeV for the fast 
-component (220 nm) using a photo-multiplier having a 30\% quantum efficiency and a surface of 930 mm$^2$ with grease and 8 layers teflon 
-wrapping~\cite{docdb5716}. A number of 30 photo-electrons per MeV for CsI crystal has been measured using the UV-extended SPL MPPC~\cite{docdb5166}. The longitudinal 
-response uniformity (LRU) is modeled by a single linear component describing the level of non-uniformity at the end of the crystal w.r.t. 
-its center. A nominal value of 5\% is used.
+component (220 nm) using a photo-multiplier having a 30\% quantum efficiency and a surface of 950 mm$^2$ with grease and 8 layers teflon 
+wrapping~\cite{docdb5716}. A number of 30 photo-electrons per MeV for CsI crystal has been measured using the UV-extended SPL 
+MPPC~\cite{docdb5166}. The longitudinal response uniformity (LRU) is modeled by a single linear component describing the level of 
+non-uniformity at the end of the crystal w.r.t. its center. A nominal value of 5\% is used.
  
 Several simulations are performed for the combinations of crystals and sensors described above. In addition, we study the sensitivity of 
 the results to the integration time, light yield, electronic noise and longitudinal response uniformity for $\rm BaF_2$ crystals with 
@@ -76,7 +76,8 @@ number & type         & time (ns)   &   per readout   & (keV) & (\%)& \\\hline
 \end{center}
 \caption{Parameters of the simulations performed for BaF$_2$ crystals with background. The number of 
 p.e./MeV and the noise are given per readout. Two readouts are mounted on each crystal. The variable 
-$E_{cut,cluster}$ denotes minimum energy required for a hit to be included in the cluster (see related discussion on cluster reconstruction above).}
+$E_{cut,cluster}$ denotes minimum energy required for a hit to be included in the cluster (see related 
+discussion on cluster reconstruction above).}
 \label{sim:tab::BaF2}
 \end{table}   
 
@@ -127,7 +128,7 @@ As expected, the resolution degrades with the decrease of the light yield, the l
 remains in an acceptable range, except in the of large APD noise (larger than 1 MeV). In this case, the CsI based calorimeter seems to be a better alternative. 
 
 The impact of the level of background is shown in Figure~\ref{sim::fig::bkg}. Increasing the background by a factor of four \footnote{Not enough background 
-was generated to simulate a factor 10 increase.} results in a $\sim30\%$ ($\sim40\%$) increase of the resolution for barium fluoride (cesium iodine) crystals. 
+was generated to simulate a factor 10 increase.} results in a $\sim30\%$ ($\sim 50\%$) increase of the resolution for barium fluoride (cesium iodine) crystals. 
 A naive linear extrapolation gives a resolution (FWHM/2.35) around 8 MeV for $\rm BaF_2$ and 14 MeV for CsI for a tenfold background increase. The effect of 
 varying the threshold in energy in the clustering algorithm from 1.0 MeV to 2.0 MeV is illustrated in Figure~\ref{sim::fig::fitsNobkg2}, for simulations 
 with and without background. Once again, the impact on the resolution is small.
