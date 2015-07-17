@@ -48,7 +48,7 @@ It then remains to apply a multilayered atomic layer deposition (ALD) coating to
 \end{figure}
 
 
-\section{Electrical performance}
+\subsection{Electrical performance}
 
 We have produced several versions of superlattice/ALD-modified RMD APDs thus far. The anticipated filter response and quantum efficiency improvements have been experimentally demonstrated. The devices, however, have somewhat elevated dark current and noise, as seen in Figure~\ref{fig:noise}. Operation at somewhat reduced temperatures improves the noise performance substantially: at $\sim\!\! 25^\circ$ below ambient, the noise of the superlattice/ALD-modified devices is equivalent to that of standard devices at room temperature.
 
@@ -61,7 +61,60 @@ Several process variations are being investigated to reduce the dark current and
 \label{fig:noise}
 \end{figure}
 
+\subsection{Device Characterization}
+We characterize various types of the standard and superlattice (SL) RMD APD's at different temperatures, which involves taking both constant illumination and pulsed illumination measurements.  These measurements allow us to characterize the dark current, gain, and noise of the devices.  For the constant illumination measurements, the current output by the photosensor is recorded with and without an LED of appropriate wavelength incident on the surface, and is used to calculate the gain.  For the pulsed illumination measurements, the LED is driven by a waveform generator and the response of the device, a pulse, is digitized and recorded by an MCA, which is then stored as an energy spectrum.  The position and the width of the peak in the spectrum are used to quantify the gain and noise. 
 
+First we present the constant illumination measurements.  First device characterized is a 9x9mm standard RMD APD, which serves as a baseline reference in terms of amount of dark current, maximum gain, and noise.  Fig.~\ref{fig:stdconst} shows for various temperatures a) dark current as a function of the bias voltage, b) gain as a function of the bias voltage, and c) dark current as a function of the gain.
+
+Similarly, Fig~\ref{fig:slconst} shows the same measurements as Fig.1 but for a 9x9mm SL-APD with a 5-layer filter. As we can see, this particular device does not achieve a gain of 500 above $0^{\circ}$C, which is the nominal operating gain that we aim for.  We can compare the performances of the two device by comparing the dark current at gain 500 as shown in Fig.3.  We see that the SL-APD needs to be cooled down to $-10^{\circ}$C before the dark current becomes comparable to that of the standard device at room temperature ($25^{\circ}$C).
+
+The pulsed measurments allow us to quantify the noise and the gain, which can be combined to determine the best operating bias voltage where the signal-to-noise ratio is maximized.  
+
+First, the device response to the pulsing LED is recorded.  Th width of the resulting gaussian peak has contributions from the electronic noise and the excess noise of the device.  Next, we inject a tail pulse with $110\mu s$ decay time into the test input of the charge-sensitive preamplifier, which allows us to directly measure the electronic noise.  Lastly, we expose the photosensor to a $^{55}$Fe source which emits 5.9 keV x-rays for energy calibration purposes.  The noise reported in this section is in units of eV(Si), or eV in silicon, which has a conversion factor of 3.62 eV(Si)/electron.  
+
+Put pulsed measurement plots here.
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[h]{0.9\linewidth}
+    \includegraphics[width=\linewidth]{Figures/StdGainCurves.png}
+    \caption{Gain curves for 9x9mm standard RMD APD at various temperatures}
+  \end{subfigure}
+
+  \begin{subfigure}[h]{0.9\linewidth}
+    \includegraphics[width=\linewidth]{Figures/StdDarkCurrentVsGain.png}
+    \caption{Dark current for 9x9mm standard RMD APD at various temperatures}
+  \end{subfigure}
+  \label{fig:stdconst}
+  \caption{Constant illumination measurements for 9x9mm standard device}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \begin{subfigure}[h]{0.9\linewidth}
+    \includegraphics[width=\linewidth]{Figures/SLGainCurves.png}
+    \caption{Gain curves for 9x9mm SL APD at various temperatures}
+  \end{subfigure}
+
+  \begin{subfigure}[h]{0.9\linewidth}
+    \includegraphics[width=\linewidth]{Figures/SLDarkCurrentVsGain.png}
+    \caption{Dark current for 9x9mm SL APD at various temperatures}
+  \end{subfigure}
+  \label{fig:slconst}
+  \caption{Constant illumination measurements for 9x9mm SL device}
+\end{figure}
+
+\subsection{Radiation Hardness of APD's}
+
+We also test the radiation hardness of both the standard and SL APD's when exposed to $\gamma$ and neutron radiation.  We prepare two sets of devices, each set consisting of one 9x9mm standard APD and one 9x9 SL APD, then expose them to 1, 10, then 100 krads of $\gamma$ radiation or $10^9$, then $10^{10}$ neutrons/cm$^2$ of neutron radiation.  After exposure to each magnitude, the devices were re-characterized to quantify any degradation.  
+
+\subsection{Detecting BaF$_2$ Scintillation}
+
+We couple BaF$_2$ crystals of two different form factors, 10x10x13mm and 30x30x250mm, to the photosensors with optical grease and shine various radioactive sources and record the energy spectra.  The larger crystal size is close to the actual crystal size to be placed in the calorimeter.  The noise of the SL devices was too high at room temperature to see the BaF$_2$ scintillation light from a $^{137}$Cs source. As comparison, we measure both the standard and SL devices at $-15^{\circ}$; the respective spectra are shown in Fig. 4.  
+
+Put BaF2 spectra here.
+
+As we can see, the standard device achieved an excellent energy resolution of 4.6\%.  While we can see some evidence for the 662 keV photopeak above the noise in the SL device, the finer structures such as the compton edge and the back-scatter peak could not be discerned.  
 
 \begin{figure}[h!]
 \begin{center}
