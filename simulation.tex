@@ -108,7 +108,6 @@ minimum energy required for a hit to be included in the cluster (see discussion 
 \label{sim:tab::Csi}
 \end{table}   
 
-
 The distribution of the difference between the reconstructed cluster energy and the true signal electron energy, $\Delta E = E_{clu}-E_{trk}$, 
 are shown in Figure~\ref{sim::fig::fits} for a few simulations. This variable accounts for the energy lost by the electron before hitting 
 the calorimeter. The high-side tail is due to background pile-up with the cluster. An unbinned likelihood fit to the data with a Crystal 
@@ -120,18 +119,18 @@ The core resolution and FHWM/2.35 for the $\rm BaF_2$ crystals with SL/ALD APD (
 and $4.4\pm 0.3$ MeV ($5.7 \pm 0.3$ MeV), respectively. The comparison of the two $\Delta E$ spectra are shown in Figure~\ref{sim::fig::fitsBaCsi}. 
 The resolution for CsI is about 10\% larger, mostly due to the effect of additional noise integrated over a longer time window compared to 
 barium fluoride. Improved treatment of the waveform digitization and hit extraction should partially alleviate this difference. We also note 
-that the different readouts for $\rm BaF_2$ crystals yield fairly similar results; the SL/ALD APD performing a bit better than the 
+that the different readouts for $\rm BaF_2$ crystals yield fairly similar results; the SL/ALD APD performing slightly better than the 
 UV-extended ALD MPPC.
 
-The dependence on the light yield, longitudinal response uniformity and readout noise are displayed in Figure~\ref{sim::fig::param} and \ref{sim::fig::param2}. 
-As expected, the resolution degrades with the decrease of the light yield, the longitudinal response uniformity, or the electronic noise. The resolutions 
-remains in an acceptable range, except in the of large APD noise (larger than 1 MeV). In this case, the CsI based calorimeter seems to be a better alternative. 
+The dependence on the light yield, longitudinal response uniformity and readout noise are displayed in Figure~\ref{sim::fig::param} 
+and \ref{sim::fig::param2}. As expected, the resolution degrades with the decrease of the light yield, the longitudinal response uniformity, 
+or the electronic noise. The resolutions remains in an acceptable range, except in the of large APD noise (larger than 1 MeV). In this 
+case, the CsI based calorimeter seems to be a better alternative. 
 
-The impact of the level of background is shown in Figure~\ref{sim::fig::bkg}. Increasing the background by a factor of four \footnote{Not enough background 
-was generated to simulate a factor 10 increase.} results in a $\sim30\%$ ($\sim 50\%$) increase of the resolution for barium fluoride (cesium iodine) crystals. 
-A naive linear extrapolation gives a resolution (FWHM/2.35) around 8 MeV for $\rm BaF_2$ and 14 MeV for CsI for a tenfold background increase. The effect of 
-varying the threshold in energy in the clustering algorithm from 1.0 MeV to 2.0 MeV is illustrated in Figure~\ref{sim::fig::fitsNobkg2}, for simulations 
-with and without background. Once again, the impact on the resolution is small.
+The impact of the level of background is shown in Figure~\ref{sim::fig::bkg}. Increasing the background by a factor of four results in a $\sim30\%$ 
+($\sim 50\%$) increase of the resolution for barium fluoride (cesium iodine) crystals with our current version of hit digitization. Improved treatment 
+of the pile-up will certainly lead to better results. The effect of varying the threshold in energy in the clustering algorithm from 1.0 MeV to 2.0 MeV 
+is illustrated in Figure~\ref{sim::fig::fitsNobkg2}, for simulations with and without background. Once again, the impact on the resolution is small.
 
 Finally, we show the signal acceptance in Figure~\ref{sim::fig::effi}, defined as the number of events having a reconstructed track and an electromagnetic 
 cluster above a given energy threshold normalized to the number of events containing a reconstructed track. Since the absolute value of energy spectra are 
